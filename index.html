@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panificadora Bacanga</title>
+    
+    <!-- Favicon e Web Manifest -->
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bacanga" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Panificadora Bacanga</h1>
+        <button id="add-table-btn">Adicionar Mesa</button>
+    </header>
+
+    <main>
+        <section id="order-section">
+            <label for="table-select"><strong>Selecione a mesa:</strong></label>
+            <select id="table-select">
+                <option value="1">Mesa 1</option>
+                <option value="2">Mesa 2</option>
+                <option value="3">Mesa 3</option>
+                <option value="4">Mesa 4</option>
+                <option value="5">Mesa 5</option>
+            </select>
+
+            <h2>Adicionar Lanches</h2>
+            <div class="input-container">
+                <input type="text" id="snack-name" placeholder="Nome do Lanche">
+                <input type="number" id="snack-price" placeholder="Valor">
+                <button id="confirm-btn">Confirmar</button>
+            </div>
+
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th><strong>Mesa</strong></th>
+                        <th><strong>Produto</strong></th>
+                        <th><strong>Quantidade</strong></th>
+                        <th><strong>Valor Unitário (R$)</strong></th>
+                        <th><strong>Valor Total (R$)</strong></th>
+                        <th><strong>Ações</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Pedidos adicionados aparecem aqui -->
+                </tbody>
+            </table>
+            
+            <h3><strong>Resumo por Mesa:</strong></h3>
+            <ul id="table-summary">
+                <!-- Somatório por mesa aparecerá aqui -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
